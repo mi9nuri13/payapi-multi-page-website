@@ -39,7 +39,11 @@ export const useStyles = makeStyles(theme => ({
     companies: {
         backgroundImage: `url(${circlePattern})`,
         backgroundPosition: 'center top -200px',
-        backgroundSize: 400
+        backgroundSize: 400,
+        [theme.breakpoints.up(1200)]: {
+            backgroundPosition: 'left -152px top -192px',
+            backgroundSize: 514,
+        }
     },
     companiesLogosContainer: {
         [theme.breakpoints.up(1200)]: {
