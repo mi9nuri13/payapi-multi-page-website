@@ -62,7 +62,7 @@ const Header = () => {
     ), [ classes, clickHandler, menuClickHandler, ]);
 
     return (
-        <header className={classNames('flex items-center justify-between py-4', globalStyles.px)}>
+        <header className={classNames('flex items-center justify-between py-4 absolute w-full', globalStyles.px)}>
             <div elevation={0} className={classNames('flex items-center')}>
                 <Link to="/">
                     <img 

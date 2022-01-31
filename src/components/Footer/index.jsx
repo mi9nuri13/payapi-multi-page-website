@@ -13,7 +13,7 @@ const Footer = () => {
     const globalStyles = useGlobalStyles();
 
     return (
-        <footer className={classNames('flex flex-col items-center bg-no-repeat bg-center bg-cover pt-8 pb-12', 
+        <footer className={classNames('flex flex-col items-center bg-no-repeat bg-cover pt-8 pb-12', 
             classes.footer, globalStyles.px, 'sm:flex-row sm:justify-between sm:pb-8')}>
             <div className={classNames('flex flex-col items-center sm:flex-row')}>
                 <Link to="/">
