@@ -22,31 +22,31 @@ const Header = () => {
     const clickHandler = useCallback(() => setCanIOpenNavBar(false), []);
 
     const headerNavigation = useMemo(() => (
-        <nav className={classNames('pt-4 md:ml-8 md:pt-0 md:relative h-full', classes.headerNav)}>
-            <Hidden mdUp>
+        <nav className={classNames('pt-4 md:ml-8 sm:pt-0 md:relative h-full', classes.headerNav)}>
+            <Hidden smUp>
                 <Button onClick={menuClickHandler}><CloseIcon classes={{ root: 'text-white'}} /></Button>
             </Hidden>
-            <List component="ul" className={classNames('flex flex-col md:flex-row',)}>
+            <List component="ul" className={classNames('flex flex-col sm:flex-row',)}>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/" >
                     <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white', 'color-transition', classes.headerNavItemText, 
+                        <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
                             'md:mb-0 md:mt-0')}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/projects">
                     <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white', 'color-transition', classes.headerNavItemText, 
+                        <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
                             'md:mb-0 md:mt-0')}} primary="Projects" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/resume">
                     <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white', 'color-transition', classes.headerNavItemText, 
+                        <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
                             'md:mb-0 md:mt-0')}} primary="Resume" />
                     </ListItemButton>
                 </ListItem>
             </List>
-            <Hidden mdUp>
+            <Hidden smUp>
                 <div elevation={0} className={classNames('flex flex-col items-stretch absolute w-full bg-transparent',  
                     classes.headerDrawerBottom)}>
                     <Link to="/resume" onClick={clickHandler} className={classNames('no-underline', classes.contactMeLink)}>
@@ -71,27 +71,31 @@ const Header = () => {
                         src={logo}
                     />
                 </Link>
-                <Hidden mdDown>
+                <Hidden smDown>
                     { headerNavigation }
                 </Hidden>
-                <Hidden mdUp>
+                <Hidden smUp>
                     <Drawer anchor="right" open={canIOpenNavBar} onClose={menuClickHandler} classes={{ paper: classes.headerDrawe}}>
                         { headerNavigation }
                     </Drawer>
                 </Hidden>
             </div>
             <div elevation={0} className={classNames('flex items-center')}>
-                <Hidden mdDown>
-                    <Link to="/resume" className={classNames()}>
-                        <Button className={classNames(classes.headerGetStarted)}>Contact Me</Button>
+                <Hidden smDown>
+                    <Link to="/resume" className={classNames('')}>
+                        <button 
+                            className={classNames(classes.headerGetStarted, globalStyles.darkPinkBg, 
+                            'border-0 outline-none rounded-full text-white py-2 px-5')}>
+                            Schedule a Demo
+                        </button>
                     </Link>
                 </Hidden>
-                <Hidden mdUp>
+                <Hidden smUp>
                     <button 
                         aria-label="menu" 
                         className={classNames('bg-transparent border-0 outline-none',)} 
                         onClick={menuClickHandler}>
-                        <MenuIcon />
+                        <MenuIcon classes={{ root: 'text-sky-700'}} />
                     </button>
                 </Hidden>
             </div>
