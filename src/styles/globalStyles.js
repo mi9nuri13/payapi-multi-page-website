@@ -15,6 +15,14 @@ export const useGlobalStyles = makeStyles(theme => ({
         paddingLeft: '5%',
         paddingRight: '5%',
     },
+    svgColor: {
+        '& path': {
+            fill: 'currentcolor !important'
+        },
+        '& g': {
+            fill: 'currentcolor !important'
+        }
+    },
     darkPinkBg: {
         backgroundColor: '#BA4270'
     },

@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/icons/logo.svg';
+import { ReactComponent as Logo } from '../../assets/images/icons/logo.svg';
 import { List, ListItem, ListItemButton, ListItemText } from '@mui/material'
 import { useGlobalStyles } from '../../styles'
 import { useStyles } from './styles'
@@ -17,11 +17,7 @@ const Footer = () => {
             classes.footer, globalStyles.px, 'sm:flex-row sm:justify-between sm:pb-8')}>
             <div className={classNames('flex flex-col items-center sm:flex-row')}>
                 <Link to="/">
-                    <img 
-                        alt="logo"
-                        className={classNames('block')}
-                        src={logo}
-                    />
+                    <Logo className={classNames('text-white', globalStyles.svgColor)} />
                 </Link>
                 <ul className={classNames('flex flex-col items-center mt-8 sm:mt-0 sm:ml-8 sm:flex-row',)}>
                     <li >
