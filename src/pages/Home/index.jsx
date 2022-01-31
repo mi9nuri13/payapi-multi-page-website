@@ -57,7 +57,7 @@ const Home = () => {
                 </div>
             </section>
             <section className={classNames(globalStyles.px, globalStyles.mirageBlueBg, classes.companies,
-                'pt-16 pb-12 bg-no-repeat md:flex md:flex-row-reverse md:justify-between md:items-center')}>
+                'pt-16 pb-12 md:pb-16 bg-no-repeat md:flex md:flex-row-reverse md:justify-between md:items-center mb-12')}>
                 <div className={classNames('flex items-center justify-between flex-wrap', classes.companiesLogosContainer)}>
                     <ImageContainer alt="tesla" image={<TeslaLogo  className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
                     <ImageContainer alt="microsoft" image={<MicrosoftLogo className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
