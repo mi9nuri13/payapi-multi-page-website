@@ -14,7 +14,7 @@ const Footer = () => {
 
     return (
         <footer className={classNames('flex flex-col items-center bg-no-repeat bg-center bg-cover pt-8 pb-12', 
-            classes.footer)}>
+            classes.footer, globalStyles.px, 'sm:flex-row sm:justify-between sm:pb-8')}>
             <div className={classNames('flex flex-col items-center sm:flex-row')}>
                 <Link to="/">
                     <img 
@@ -23,28 +23,28 @@ const Footer = () => {
                         src={logo}
                     />
                 </Link>
-                <ul className={classNames('flex flex-col items-center mt-8 sm:flex-row',)}>
+                <ul className={classNames('flex flex-col items-center mt-8 sm:mt-0 sm:ml-8 sm:flex-row',)}>
                     <li >
-                        <Link to="/pricing" className={classNames('text-slate-200 sm:text-sky-700', 'color-transition', 
-                            'md:mb-0 md:mt-0')}>
+                        <Link to="/pricing" className={classNames('text-slate-200', 'color-transition', 
+                            'md:mb-0 sm:mr-4 sm:mt-0')}>
                             Pricing
                         </Link>
                     </li>
                     <li>
-                        <Link to="about-us" className={classNames('text-slate-200 sm:text-sky-700', 'color-transition', 
-                            'md:mb-0 mt-4 block md:mt-0')} >
+                        <Link to="about-us" className={classNames('text-slate-200', 'color-transition', 
+                            'md:mb-0 mt-4 block sm:mr-4 sm:mt-0')} >
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link to="/contact" className={classNames('text-slate-200 sm:text-sky-700', 'color-transition', 
-                            'md:mb-0 mt-4 block md:mt-0')}>
+                        <Link to="/contact" className={classNames('text-slate-200', 'color-transition', 
+                            'md:mb-0 mt-4 block sm:mt-0')}>
                             Contact
                         </Link>
                     </li>
                 </ul>
             </div>
-            <ul className={classNames('flex items-center mt-8 sm:flex-row',)}>
+            <ul className={classNames('flex items-center mt-8 sm:mt-0 sm:flex-row',)}>
                 <FacebookIcon className={classNames('text-white mr-4')} />
                 <TwitterIcon className={classNames('text-white mr-4')} />
                 <LinkedInIcon className={classNames('text-white')} />
