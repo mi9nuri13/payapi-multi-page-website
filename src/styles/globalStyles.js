@@ -17,5 +17,17 @@ export const useGlobalStyles = makeStyles(theme => ({
     },
     darkPinkBg: {
         backgroundColor: '#BA4270'
+    },
+    mirageBlueBg: {
+        backgroundColor: '#1B262F'
+    },
+    sanJuanBlueBg: {
+        backgroundColor: '#36536B'
+    },
+    sanJuanBlueColor: {
+        color: '#36536B'
+    },
+    lightJuanBlueColor: {
+        color: '#6C8294'
     }
 }));

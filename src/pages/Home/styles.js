@@ -7,7 +7,7 @@ export const useStyles = makeStyles(theme => ({
         backgroundImage: `url(${phoneIllustration}), url(${circlePattern})`,
         backgroundPosition: 'center top 83px, center top -319px',
         backgroundSize: '240px, 600px',
-        height: 500,
+        height: 765,
         [theme.breakpoints.up('sm')]: {
             backgroundPosition: 'center top 83px, center top -634px',
             backgroundSize: '240px, 900px',
@@ -15,6 +15,7 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up(800)]: {
             backgroundPosition: 'center top 83px, center top -725px',
             backgroundSize: '240px, 1020px',
+            height: 500,
 
         },
         [theme.breakpoints.up('md')]: {
@@ -25,7 +26,25 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up(1200)]: {
             backgroundPosition: 'right 190px top 83px, right -100px top -173px',
             backgroundSize: '323px, 622px',
+            height: 580,
 
+        }
+    },
+    heroTitle: {
+        [theme.breakpoints.up(1100)]: {
+            fontSize: '2.75rem !important',
+            lineHeight: '2.9rem !important'
+        }
+    },
+    companyImageContainer: {
+        height: 24
+    },
+    companyImage: {
+        width: 121
+    },
+    companiesLogos: {
+        '& path': {
+            fill: 'currentcolor !important'
         }
     }
 }))
