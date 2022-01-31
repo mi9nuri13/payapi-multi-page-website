@@ -57,25 +57,25 @@ const Home = () => {
                 </div>
             </section>
             <section className={classNames(globalStyles.px, globalStyles.mirageBlueBg, classes.companies,
-                'pt-16 pb-12 bg-no-repeat')}>
-                <div className={classNames('flex items-center flex-wrap')}>
-                    <ImageContainer alt="tesla" image={<TeslaLogo  className={classNames('text-white', classes.companiesLogos)}/>} />
-                    <ImageContainer alt="microsoft" image={<MicrosoftLogo className={classNames('text-white', classes.companiesLogos)}/>} />
-                    <ImageContainer alt="hewlettPackard" image={<HewlettPackardLogo className={classNames('text-white', classes.companiesLogos)}/>} />
-                    <ImageContainer alt="oracle" image={<OracleLogo className={classNames('text-white', classes.companiesLogos)}/>} />
-                    <ImageContainer alt="google" image={<GoogleLogo  className={classNames('text-white', classes.companiesLogos)}/>} />
-                    <ImageContainer alt="nvidia" image={<NvidiaLogo  className={classNames('text-white', classes.companiesLogos)}/>} />
+                'pt-16 pb-12 bg-no-repeat md:flex md:flex-row-reverse md:justify-between md:items-center')}>
+                <div className={classNames('flex items-center justify-between flex-wrap', classes.companiesLogosContainer)}>
+                    <ImageContainer alt="tesla" image={<TeslaLogo  className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
+                    <ImageContainer alt="microsoft" image={<MicrosoftLogo className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
+                    <ImageContainer alt="hewlettPackard" image={<HewlettPackardLogo className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
+                    <ImageContainer alt="oracle" image={<OracleLogo className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
+                    <ImageContainer alt="google" image={<GoogleLogo  className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
+                    <ImageContainer alt="nvidia" image={<NvidiaLogo  className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
                 </div>
-                <div className={classNames('mt-8 flex flex-col items-center')}>
+                <div className={classNames('mt-8 md:mt-0 flex flex-col items-center md:items-start', classes.companiesContent)}>
                     <Typography 
                         component="h2" 
                         variant="h6" 
-                        className={classNames('text-white text-center font-bold')}>
+                        className={classNames('text-white text-center md:text-left font-bold')}>
                         Who we work with
                     </Typography>
                     <Typography 
                         component="p" 
-                        className={classNames('text-slate-300 text-center pt-4')}>
+                        className={classNames('text-slate-300 text-center md:text-left pt-4')}>
                         Today, millions of people around the world have successfully connected 
                         their accounts to apps they love using our API. We provide 
                         developers with the tools they need to create easy and accessible 

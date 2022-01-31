@@ -41,8 +41,16 @@ export const useStyles = makeStyles(theme => ({
         backgroundPosition: 'center top -200px',
         backgroundSize: 400
     },
+    companiesLogosContainer: {
+        [theme.breakpoints.up(1200)]: {
+            maxWidth: '46% !important'
+        }
+    },
     companyImageContainer: {
-        height: 24
+        height: 24,
+        [theme.breakpoints.up('sm')]: {
+            width: '31% !important'
+        }
     },
     companyImage: {
         width: 121
@@ -50,6 +58,11 @@ export const useStyles = makeStyles(theme => ({
     companiesLogos: {
         '& path': {
             fill: 'currentcolor !important'
+        }
+    },
+    companiesContent: {
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '45% !important'
         }
     }
 }))
