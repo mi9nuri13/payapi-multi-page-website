@@ -36,6 +36,11 @@ export const useStyles = makeStyles(theme => ({
             lineHeight: '2.9rem !important'
         }
     },
+    companies: {
+        backgroundImage: `url(${circlePattern})`,
+        backgroundPosition: 'center top -200px',
+        backgroundSize: 400
+    },
     companyImageContainer: {
         height: 24
     },
