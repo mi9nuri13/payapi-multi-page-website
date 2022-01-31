@@ -7,6 +7,25 @@ export const useStyles = makeStyles(theme => ({
         backgroundImage: `url(${phoneIllustration}), url(${circlePattern})`,
         backgroundPosition: 'center top 83px, center top -319px',
         backgroundSize: '240px, 600px',
-        height: 500
+        height: 500,
+        [theme.breakpoints.up('sm')]: {
+            backgroundPosition: 'center top 83px, center top -634px',
+            backgroundSize: '240px, 900px',
+        },
+        [theme.breakpoints.up(800)]: {
+            backgroundPosition: 'center top 83px, center top -725px',
+            backgroundSize: '240px, 1020px',
+
+        },
+        [theme.breakpoints.up('md')]: {
+            backgroundPosition: 'right 121px top 83px, right -100px top -64px',
+            backgroundSize: '270px, contain',
+
+        },
+        [theme.breakpoints.up(1200)]: {
+            backgroundPosition: 'right 190px top 83px, right -100px top -173px',
+            backgroundSize: '323px, 622px',
+
+        }
     }
 }))
