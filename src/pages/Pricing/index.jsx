@@ -117,14 +117,14 @@ const Pricing = () => {
     return (
         <main>
             <section 
-                className={classNames(globalStyles.px, globalStyles.hero, 'bg-no-repeat')}>
+                className={classNames(globalStyles.px, globalStyles.hero, 'bg-no-repeat md:mb-8')}>
                 <Typography 
-                    className={classNames('font-bold text-center', globalStyles.sanJuanBlueColor)}
+                    className={classNames('font-bold text-center md:text-5xl', globalStyles.sanJuanBlueColor)}
                     component="h1"
                     variant="h5">
                     Pricing
                 </Typography>
-                <div className={classNames('flex flex-col items-stretch mt-8')}>
+                <div className={classNames('flex flex-col items-stretch sm:flex-row sm:justify-between mt-8')}>
                     {
                         cardsContent.map((item, index) => (
                             <Card key={index} { ...item } />

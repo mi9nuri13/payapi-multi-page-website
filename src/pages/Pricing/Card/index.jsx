@@ -1,11 +1,11 @@
 import classNames from 'classnames'
 import { useGlobalStyles } from '../../../styles'
-import { Divider, Typography } from '@mui/material';
+import { Divider, Hidden, Typography } from '@mui/material';
 import { useCallback } from 'react'
 import CheckIcon from '@mui/icons-material/Check';
 import { useStyles } from './styles';
 
-const Card = ({ list, price, title }) => {
+const Card = ({ description, list, price, title }) => {
     const classes = useStyles();
     const globalStyles = useGlobalStyles();
 
@@ -17,13 +17,20 @@ const Card = ({ list, price, title }) => {
     ), [ classes, globalStyles ])
 
     return (
-        <article className={classNames('mb-16 flex flex-col items-center')}>
+        <article className={classNames('mb-16 sm:mb-0 flex flex-col items-center', classes.card)}>
             <Typography 
                 className={classNames('font-bold text-center', globalStyles.darkPinkColor)}
                 component="h2"
                 variant="h5">
                 { title }
             </Typography>
+            <Hidden mdDown>
+                <Typography 
+                    variant="body2" 
+                    className={classNames(globalStyles.lightJuanBlueColor, 'text-center text-base mt-4')}>
+                    { description }
+                </Typography>
+                </Hidden>
             <Typography 
                 className={classNames('font-bold mt-8 text-center', globalStyles.sanJuanBlueColor)}
                 component="h3"
