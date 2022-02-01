@@ -46,6 +46,20 @@ export const useGlobalStyles = makeStyles(theme => ({
         backgroundImage: `url(${circlePattern})`,
         backgroundPosition: 'right -136px top -207px',
         backgroundSize: '300px',
-        paddingTop: '7rem'
+        paddingTop: '7rem',
+        [theme.breakpoints.up('sm')]: {
+            backgroundPosition: 'right -66px top -207px',
+            backgroundSize: 350,
+            paddingTop: '8rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            backgroundPosition: 'right -37px top -214px',
+            backgroundSize: 350,
+             paddingTop: '7rem',
+        },
+        [theme.breakpoints.up(1200)]: {
+            backgroundPosition: 'right -37px top -214px',
+            backgroundSize: 350,
+        }
     }
 }));
