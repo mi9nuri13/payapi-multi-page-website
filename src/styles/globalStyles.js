@@ -1,4 +1,5 @@
 import { makeStyles } from "@mui/styles";
+import circlePattern from '../assets/images/icons/bg-pattern-circle.svg';
 
 export const useGlobalStyles = makeStyles(theme => ({
     main: {
@@ -35,7 +36,16 @@ export const useGlobalStyles = makeStyles(theme => ({
     sanJuanBlueColor: {
         color: '#36536B'
     },
+    darkPinkColor: {
+        color: '#BA4270'
+    },
     lightJuanBlueColor: {
         color: '#6C8294'
+    },
+    hero: {
+        backgroundImage: `url(${circlePattern})`,
+        backgroundPosition: 'right -136px top -207px',
+        backgroundSize: '300px',
+        paddingTop: '7rem'
     }
 }));

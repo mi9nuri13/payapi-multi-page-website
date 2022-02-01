@@ -12,7 +12,7 @@ const App = () => {
     const HomePage = loadable(() => import(/* webpackChunkName: "HomePage" */ '../Home'));
     const Header = loadable(() => import(/* webpackChunkName: "Header" */ '../../components/Header'));
     const Footer = loadable(() => import(/* webpackChunkName: "Footer" */ '../../components/Footer'));
-    //const FeedbackDetailsPage = loadable(() => import(/* webpackChunkName: "FeedbackDetailsPage" */ '../FeedbackDetails'));
+    const PricingPage = loadable(() => import(/* webpackChunkName: "PricingPage" */ '../Pricing'));
 
     return (
         <>
@@ -22,6 +22,7 @@ const App = () => {
                         <Router>
                             <Header />
                             <Routes>
+                                <Route exact path="/pricing" element={<PricingPage />} />
                                 <Route exact path="/" element={<HomePage />} />
                             </Routes>
                             <ScheduleDemo />
