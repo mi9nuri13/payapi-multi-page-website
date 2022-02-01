@@ -27,22 +27,22 @@ const Header = () => {
                 <Button onClick={menuClickHandler}><CloseIcon classes={{ root: 'text-white'}} /></Button>
             </Hidden>
             <List component="ul" className={classNames('flex flex-col sm:flex-row',)}>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/" >
+                <ListItem disablePadding onClick={clickHandler} component={Link} to="/pricing" >
                     <ListItemButton>
                         <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0')}} primary="Home" />
+                            'md:mb-0 md:mt-0')}} primary="Pricing" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/projects">
+                <ListItem disablePadding onClick={clickHandler} component={Link} to="/about-us">
                     <ListItemButton>
                         <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0')}} primary="Projects" />
+                            'md:mb-0 md:mt-0')}} primary="About" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/resume">
+                <ListItem disablePadding onClick={clickHandler} component={Link} to="/contact">
                     <ListItemButton>
                         <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0')}} primary="Resume" />
+                            'md:mb-0 md:mt-0')}} primary="Contact" />
                     </ListItemButton>
                 </ListItem>
             </List>

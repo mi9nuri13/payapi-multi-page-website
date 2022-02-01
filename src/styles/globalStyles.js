@@ -54,12 +54,7 @@ export const useGlobalStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up('md')]: {
             backgroundPosition: 'right -37px top -214px',
-            backgroundSize: 350,
-             paddingTop: '7rem',
+            paddingTop: '7rem',
         },
-        [theme.breakpoints.up(1200)]: {
-            backgroundPosition: 'right -37px top -214px',
-            backgroundSize: 350,
-        }
     }
 }));
