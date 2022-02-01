@@ -1,21 +1,23 @@
 import classNames from 'classnames'
-import { useGlobalStyles } from '../../styles'
-import { Typography } from '@mui/material';
+import { useGlobalStyles } from '../../../styles'
+import { Divider, Typography } from '@mui/material';
 import { useCallback } from 'react'
 import CheckIcon from '@mui/icons-material/Check';
+import { useStyles } from './styles';
 
-const Card = ({ list, title }) => {
+const Card = ({ list, price, title }) => {
+    const classes = useStyles();
     const globalStyles = useGlobalStyles();
 
     const ListItem = useCallback(({ name, isChecked }) => (
-        <li className={classNames('flex items-center')}>
-            { isChecked ? <CheckIcon className={classNames(globalStyles.darkPinkColor)} /> : <span aria-label='not included in this plan' className='mr-3'></span>}
+        <li className={classNames('flex items-center mb-2.5', globalStyles.lightJuanBlueColor)}>
+            { isChecked ? <CheckIcon className={classNames(globalStyles.darkPinkColor, 'mr-3')} /> : <span aria-label='not included in this plan' className={classNames('mr-3', classes.notChecked)}></span>}
             { name }
         </li>
-    ), [ globalStyles ])
+    ), [ classes, globalStyles ])
 
     return (
-        <article>
+        <article className={classNames('mb-16 flex flex-col items-center')}>
             <Typography 
                 className={classNames('font-bold text-center', globalStyles.darkPinkColor)}
                 component="h2"
@@ -25,17 +27,21 @@ const Card = ({ list, title }) => {
             <Typography 
                 className={classNames('font-bold mt-8 text-center', globalStyles.sanJuanBlueColor)}
                 component="h3"
-                variant="4">
-                { title }
+                variant="h4">
+                ${ price }
             </Typography>
-            <ul className={classNames('flex flex-col mt-4 py-4 items-start')}>
+            <Divider className={classNames('border-slate-300 mt-8 w-full')} />
+            <ul className={classNames('flex flex-col items-start mt-4 py-4')}>
                 {
                     list.map(item => (
                         <ListItem { ...item } />
                     ))
                 }
             </ul>
-            <button className={classNames('rounded-full bg-transparent px-1.5 py-3.5 mt-4 capitalize')}>
+            <Divider className={classNames('border-slate-300 w-full')} />
+            <button 
+                className={classNames('rounded-full bg-transparent px-4 py-2 mt-8 border border-cyan-900 border-solid capitalize',
+                globalStyles.sanJuanBlueColor)}>
                 Request access
             </button>
         </article>
