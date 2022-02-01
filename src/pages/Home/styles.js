@@ -46,6 +46,9 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     companiesLogosContainer: {
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '53% !important'
+        },
         [theme.breakpoints.up(1200)]: {
             maxWidth: '46% !important'
         }
@@ -53,6 +56,12 @@ export const useStyles = makeStyles(theme => ({
     companyImageContainer: {
         height: 24,
         [theme.breakpoints.up('sm')]: {
+            width: '31% !important'
+        },[theme.breakpoints.up('md')]: {
+            height: 21,
+            width: '26% !important'
+        },[theme.breakpoints.up(1200)]: {
+            height: 24,
             width: '31% !important'
         }
     },
@@ -88,8 +97,13 @@ export const useStyles = makeStyles(theme => ({
     },
     formCodeImageContainer: {
         height: 300,
+        [theme.breakpoints.up('md')]: {
+            height: 250,
+            width: 350
+        },
         [theme.breakpoints.up(1200)]: {
-            height: 310
+            height: 310,
+            width: 'auto'
         }
     },
     formCodeContent: {
