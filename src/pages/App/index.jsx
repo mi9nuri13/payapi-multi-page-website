@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { StylesProvider } from '@mui/styles';
 import { AppContextProvider } from '../../context/AppContext';
 import loadable from '@loadable/component';
+import ScheduleDemo from '../../components/ScheduleDemo'
 //mport { useEffect } from "react";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
                             <Routes>
                                 <Route exact path="/" element={<HomePage />} />
                             </Routes>
+                            <ScheduleDemo />
                             <Footer />
                         </Router>
                     </AppContextProvider>

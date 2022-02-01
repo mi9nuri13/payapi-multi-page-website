@@ -44,6 +44,7 @@ const Home = () => {
                         <input 
                             className={classNames('border-0 outline-none w-full sm:w-auto rounded-full py-2 px-3.5',
                             'sm:grow sm:rounded-br-none sm:rounded-tr-none', globalStyles.lightJuanBlueColor)}
+                            placeholder='Enter email address'
                         />
                         <button 
                             className={classNames(globalStyles.darkPinkBg, 
