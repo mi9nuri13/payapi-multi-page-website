@@ -1,9 +1,10 @@
 import classNames from 'classnames'
 import { useStyles } from './styles'
+import Card from './Card'
 import { useGlobalStyles } from '../../styles'
 import { Link } from 'react-router-dom'
 import { useCallback } from 'react';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { ReactComponent as GoogleLogo } from '../../assets/images/shared/google.svg';
 import { ReactComponent as MicrosoftLogo } from '../../assets/images/shared/microsoft.svg';
 import { ReactComponent as TeslaLogo } from '../../assets/images/shared/tesla.svg';
@@ -137,6 +138,24 @@ const Home = () => {
                         </Typography>
                     </div>
                 </article>
+            </section>
+            <section className={classNames(globalStyles.px, 'flex flex-col md:flex-row items-stretch pt-8 pb-12',
+                'md:justify-between')}>
+                <Card 
+                    description="Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account. "
+                    index={0}
+                    title="Personal Finances"
+                />
+                <Card 
+                    description="With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit card, and brokerage accounts."
+                    index={1}
+                    title={<>Banking &amp; Coverage</>}
+                />
+                <Card 
+                    description="It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account."
+                    index={2}
+                    title="Consumer Payments"
+                />
             </section>
         </main>
     );
