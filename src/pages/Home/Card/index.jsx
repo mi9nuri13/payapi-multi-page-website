@@ -11,7 +11,7 @@ const Card = ({ description, index, title }) => {
     const titleClasses = useMemo(() => [ classes.personalFinances, classes.banking, classes.payments ], [ classes ]);
 
     return (
-        <aritcle className={classNames('mb-8 relative', classes.card)}>
+        <article className={classNames('mb-8 relative', classes.card)}>
             <Typography 
                 component="h2" 
                 className={classNames('text-center sm:text-left md:text-center font-bold', globalStyles.sanJuanBlueColor, 
@@ -25,7 +25,7 @@ const Card = ({ description, index, title }) => {
                 className={classNames(globalStyles.lightJuanBlueColor, 'text-center sm:text-left md:text-center text-base mt-4')}>
                 { description }
             </Typography>
-        </aritcle>
+        </article>
     );
 };
 

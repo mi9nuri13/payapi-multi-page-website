@@ -89,8 +89,8 @@ const Home = () => {
                     </Link>
                 </div>
             </section>
-            <section className={classNames(globalStyles.px, classes.services, 'md:mt-16 md:pt-8 md:bg-no-repeat')}>
-                <article className={classNames('pb-12 md:flex md:items-center')}>
+            <section className={classNames(globalStyles.px, classes.services, 'md:mt-16 md:pt-8 md:pb-8 md:bg-no-repeat')}>
+                <article className={classNames('pb-12 md:flex md:justify-between md:items-center')}>
                     <div className={classNames(classes.formCodeImageContainer)}>
                         <img 
                             alt="code"
@@ -98,7 +98,7 @@ const Home = () => {
                             src={codeIllustration}  
                         />
                     </div>
-                    <div className={classNames('sm:mt-8', classes.formCodeContent)}>
+                    <div className={classNames('sm:mt-8 md:mt-0', classes.formCodeContent)}>
                         <Typography 
                             component="h2" 
                             variant="h5" 
@@ -114,7 +114,7 @@ const Home = () => {
                         </Typography>
                     </div>
                 </article>
-                <article className={classNames('pb-12 md:flex md:flex-row-reverse md:items-center', 
+                <article className={classNames('pb-12 md:flex md:justify-between md:flex-row-reverse md:items-center', 
                     classes.simpleUIContent)}>
                     <div className={classNames(classes.simpleUIImageContainer)}>
                         <img 
@@ -123,7 +123,7 @@ const Home = () => {
                             src={simpleUIIllustration}  
                         />
                     </div>
-                    <div className={classNames('mt-8', classes.formCodeContent)}>
+                    <div className={classNames('mt-8 md:mt-0', classes.formCodeContent)}>
                         <Typography 
                             component="h2" 
                             variant="h5" 

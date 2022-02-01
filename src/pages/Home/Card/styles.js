@@ -32,7 +32,7 @@ export const useStyles = makeStyles(theme => ({//
                 top: 0,
             }
         },
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             '&::before': {
                 left: 0,
                 marginLeft: 'auto',
