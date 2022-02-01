@@ -88,8 +88,8 @@ const Home = () => {
                     </Link>
                 </div>
             </section>
-            <section className={classNames(globalStyles.px)}>
-                <article className={classNames('pb-12')}>
+            <section className={classNames(globalStyles.px, classes.services, 'md:mt-16 md:pt-8 md:bg-no-repeat')}>
+                <article className={classNames('pb-12 md:flex md:items-center')}>
                     <div className={classNames(classes.formCodeImageContainer)}>
                         <img 
                             alt="code"
@@ -97,7 +97,7 @@ const Home = () => {
                             src={codeIllustration}  
                         />
                     </div>
-                    <div>
+                    <div className={classNames('sm:mt-8', classes.formCodeContent)}>
                         <Typography 
                             component="h2" 
                             variant="h5" 
@@ -106,22 +106,23 @@ const Home = () => {
                         </Typography>
                         <Typography 
                             variant="body2" 
-                            className={classNames(globalStyles.lightJuanBlueColor, 'text-center text-base mt-4')}>
+                            className={classNames(globalStyles.lightJuanBlueColor, 'text-center md:text-left text-base mt-4')}>
                             Our API comes with just a few lines of code. You’ll be up and running 
                             in no time. We built our documentation page to integrate payments 
                             functionality with ease.
                         </Typography>
                     </div>
                 </article>
-                <article className={classNames('pb-12')}>
-                    <div className={classNames(classes.formCodeImageContainer)}>
+                <article className={classNames('pb-12 md:flex md:flex-row-reverse md:items-center', 
+                    classes.simpleUIContent)}>
+                    <div className={classNames(classes.simpleUIImageContainer)}>
                         <img 
                             alt="code"
                             className={classNames('block h-full w-full')}
                             src={simpleUIIllustration}  
                         />
                     </div>
-                    <div className={classNames('mt-8')}>
+                    <div className={classNames('mt-8', classes.formCodeContent)}>
                         <Typography 
                             component="h2" 
                             variant="h5" 
@@ -130,7 +131,7 @@ const Home = () => {
                         </Typography>
                         <Typography 
                             variant="body2" 
-                            className={classNames(globalStyles.lightJuanBlueColor, 'text-center text-base mt-4')}>
+                            className={classNames(globalStyles.lightJuanBlueColor, 'text-center md:text-left text-base mt-4')}>
                             Our pre-built form is easy to integrate in your app or website’s 
                             checkout flow and designed to optimize conversion. 
                         </Typography>

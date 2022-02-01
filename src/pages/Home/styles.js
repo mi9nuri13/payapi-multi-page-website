@@ -69,7 +69,42 @@ export const useStyles = makeStyles(theme => ({
             maxWidth: '45% !important'
         }
     },
+    services: {
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '10%',
+            paddingRight: '10%',
+        },
+        [theme.breakpoints.up('md')]: {
+            backgroundImage: `url(${circlePattern})`,
+            backgroundPosition: 'right -194px bottom -50px',
+            backgroundSize: 540,
+            paddingLeft: '5%',
+            paddingRight: '5%',
+        },
+        [theme.breakpoints.up(1200)]: {
+            paddingLeft: '7%',
+            paddingRight: '7%',
+        }
+    },
     formCodeImageContainer: {
-        height: 300
+        height: 300,
+        [theme.breakpoints.up(1200)]: {
+            height: 310
+        }
+    },
+    formCodeContent: {
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '50%'
+        }
+    },
+    simpleUIImageContainer: {
+        height: 300,
+        [theme.breakpoints.up(1200)]: {
+            height: 350
+        }
+    },
+    simpleUIContent: {
+        [theme.breakpoints.up('md')]: {
+        }
     }
 }))
