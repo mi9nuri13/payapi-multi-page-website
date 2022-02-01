@@ -4,10 +4,13 @@ import './assets/css/reset.css';
 import './assets/css/index.css';
 import './assets/css/base.css';
 import App from './pages/App';
+import StyledEngineProvider from '@mui/material/StyledEngineProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StyledEngineProvider injectFirst>
+      <App />
+    </StyledEngineProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -3,13 +3,15 @@ import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles'
 import { Link } from 'react-router-dom'
 import { useCallback } from 'react';
-import { Typography } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { ReactComponent as GoogleLogo } from '../../assets/images/shared/google.svg';
 import { ReactComponent as MicrosoftLogo } from '../../assets/images/shared/microsoft.svg';
 import { ReactComponent as TeslaLogo } from '../../assets/images/shared/tesla.svg';
 import { ReactComponent as NvidiaLogo } from '../../assets/images/shared/nvidia.svg';
 import { ReactComponent as OracleLogo } from '../../assets/images/shared/oracle.svg';
 import { ReactComponent as HewlettPackardLogo } from '../../assets/images/shared/hewlett-packard.svg';
+import codeIllustration from '../../assets/images/home/illustration-easy-to-implement.svg';
+import simpleUIIllustration from '../../assets/images/home/illustration-simple-ui.svg';
 
 const Home = () => {
     const classes = useStyles();
@@ -85,6 +87,55 @@ const Home = () => {
                         About
                     </Link>
                 </div>
+            </section>
+            <section className={classNames(globalStyles.px)}>
+                <article className={classNames('pb-12')}>
+                    <div className={classNames(classes.formCodeImageContainer)}>
+                        <img 
+                            alt="code"
+                            className={classNames('block h-full w-full')}
+                            src={codeIllustration}  
+                        />
+                    </div>
+                    <div>
+                        <Typography 
+                            component="h2" 
+                            variant="h5" 
+                            className={classNames('text-center md:text-left font-bold', globalStyles.sanJuanBlueColor)}>
+                            Easy to implement
+                        </Typography>
+                        <Typography 
+                            variant="body2" 
+                            className={classNames(globalStyles.lightJuanBlueColor, 'text-center text-base mt-4')}>
+                            Our API comes with just a few lines of code. You’ll be up and running 
+                            in no time. We built our documentation page to integrate payments 
+                            functionality with ease.
+                        </Typography>
+                    </div>
+                </article>
+                <article className={classNames('pb-12')}>
+                    <div className={classNames(classes.formCodeImageContainer)}>
+                        <img 
+                            alt="code"
+                            className={classNames('block h-full w-full')}
+                            src={simpleUIIllustration}  
+                        />
+                    </div>
+                    <div className={classNames('mt-8')}>
+                        <Typography 
+                            component="h2" 
+                            variant="h5" 
+                            className={classNames('text-center md:text-left font-bold', globalStyles.sanJuanBlueColor)}>
+                            Simple UI &amp; UX
+                        </Typography>
+                        <Typography 
+                            variant="body2" 
+                            className={classNames(globalStyles.lightJuanBlueColor, 'text-center text-base mt-4')}>
+                            Our pre-built form is easy to integrate in your app or website’s 
+                            checkout flow and designed to optimize conversion. 
+                        </Typography>
+                    </div>
+                </article>
             </section>
         </main>
     );
