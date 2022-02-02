@@ -31,7 +31,7 @@ const About = () => {
 
     return (
         <main>
-            <section className={classNames('bg-no-repeat', globalStyles.hero, globalStyles.px)}>
+            <section className={classNames('bg-no-repeat flex md:mb-16', globalStyles.hero, globalStyles.px)}>
                 <div className={classNames(classes.heroContent)}>
                     <Typography 
                         className={classNames('font-bold text-center md:text-left mb-16', 
@@ -50,7 +50,7 @@ const About = () => {
                     />
                 </div>
             </section>
-            <div className={classNames(classes.meetingImage, 'mt-12 mb-8')}>
+            <div className={classNames(classes.meetingImage, 'mt-12 md:mt-16 mb-8')}>
                 <Hidden smUp>
                     <img 
                         alt="meeting"
