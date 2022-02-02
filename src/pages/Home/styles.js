@@ -38,11 +38,33 @@ export const useStyles = makeStyles(theme => ({
     },
     companies: {
         backgroundImage: `url(${circlePattern})`,
-        backgroundPosition: 'center top -200px',
-        backgroundSize: 400,
+        backgroundPosition: 'center top -270px',
+        backgroundSize: 500,
+        [theme.breakpoints.up(490)]: {
+            backgroundPosition: 'center top -469px',
+            backgroundSize: 700,
+        },
+        [theme.breakpoints.up(645)]: {
+            backgroundPosition: 'center top -800px',
+            backgroundSize: 1000,
+        },
+        [theme.breakpoints.up(800)]: {
+            backgroundPosition: 'center top -1000px',
+            backgroundSize: 1200,
+        },
+        [theme.breakpoints.up('md')]: {
+            backgroundPosition: 'left -85px top -188px',
+            backgroundSize: 550,
+        },
+        [theme.breakpoints.up(1003)]: {
+            backgroundPosition: 'left -176px top -207px',
+        },
+        [theme.breakpoints.up(1140)]: {
+            backgroundPosition: 'left -176px top -224px',
+        },
         [theme.breakpoints.up(1200)]: {
-            backgroundPosition: 'left -152px top -192px',
-            backgroundSize: 514,
+            backgroundPosition: 'left -168px top -252px',
+            backgroundSize: 574,
         }
     },
     companiesLogosContainer: {
