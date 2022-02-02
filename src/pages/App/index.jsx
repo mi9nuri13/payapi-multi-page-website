@@ -4,7 +4,8 @@ import { StylesProvider } from '@mui/styles';
 import { AppContextProvider } from '../../context/AppContext';
 import loadable from '@loadable/component';
 import ScheduleDemo from '../../components/ScheduleDemo'
-//mport { useEffect } from "react";
+import { useEffect } from "react";
+import AOS from 'aos'
 
 const App = () => {
     const theme = createTheme();
@@ -15,6 +16,8 @@ const App = () => {
     const PricingPage = loadable(() => import(/* webpackChunkName: "PricingPage" */ '../Pricing'));
     const AboutUsPage = loadable(() => import(/* webpackChunkName: "AboutUsPage" */ '../About'));
     const ContactPage = loadable(() => import(/* webpackChunkName: "ContactPage" */ '../Contact'));
+
+    useEffect(() => AOS.init(), [])
 
     return (
         <>
