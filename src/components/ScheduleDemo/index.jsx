@@ -15,12 +15,16 @@ const ScheduleDemo = () => {
             globalStyles.px)}>
             <Typography 
                 component="h2" 
+                data-aos="fade-left" 
+                data-aos-duration="3000"
                 variant="h5" 
                 className={classNames('text-center md:text-4xl md:text-left font-bold', globalStyles.sanJuanBlueColor)}>
                 Ready to start?
             </Typography>
             <form 
                 className={classNames('mt-8 md:mt-0 sm:flex sm:items-stretch sm:rounded-full sm:bg-white')}
+                data-aos="fade-right" 
+                data-aos-duration="3000"
                 onSubmit={submitHandler}>
                 <input 
                     className={classNames('border-0 outline-none w-full sm:w-auto rounded-full py-2 px-3.5',

@@ -35,12 +35,16 @@ const Contact = () => {
                     className={classNames('font-bold text-center md:text-left mb-16 md:mb-12', 
                     globalStyles.sanJuanBlueColor, classes.heroContentTitle)}
                     component="h1"
+                    data-aos="zoom-in" 
+                    data-aos-duration="3000"
                     variant="h4">
                         Submit a help request and we’ll get in touch shortly.
                 </Typography>
                 <div className={classNames('md:flex md:items-center md:justify-between')}>
                     <form 
                         className={classNames(classes.form)}
+                        data-aos="fade-left" 
+                        data-aos-duration="3000"
                         onSubmit={handleSubmit(onSubmit)}>
                         <TextField 
                             classes={{ root: classNames(classes.textField)}}
@@ -110,7 +114,10 @@ const Contact = () => {
                             Submit
                         </button>
                     </form>
-                    <div className={classNames('mt-16 md:mt-0', classes.companiesContainer)}>
+                    <div 
+                        className={classNames('mt-16 md:mt-0', classes.companiesContainer)}
+                        data-aos="fade-right" 
+                        data-aos-duration="3000">
                         <Typography 
                             component="h2" 
                             variant="h5" 

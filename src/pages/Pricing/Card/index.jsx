@@ -5,7 +5,7 @@ import { useCallback } from 'react'
 import CheckIcon from '@mui/icons-material/Check';
 import { useStyles } from './styles';
 
-const Card = ({ description, list, price, title }) => {
+const Card = ({ dataAOS, dataAOSDuration, description, list, price, title }) => {
     const classes = useStyles();
     const globalStyles = useGlobalStyles();
 
@@ -17,7 +17,10 @@ const Card = ({ description, list, price, title }) => {
     ), [ classes, globalStyles ])
 
     return (
-        <article className={classNames('mb-16 sm:mb-0 flex flex-col items-center', classes.card)}>
+        <article 
+            className={classNames('mb-16 sm:mb-0 flex flex-col items-center', classes.card)}
+            data-aos={dataAOS} 
+            data-aos-duration={dataAOSDuration}>
             <Typography 
                 className={classNames('font-bold text-center', globalStyles.darkPinkColor)}
                 component="h2"

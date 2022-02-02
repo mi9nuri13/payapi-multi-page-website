@@ -31,7 +31,8 @@ const Home = () => {
     return (
         <main>
             <section className={classNames(globalStyles.px, classes.hero, 
-                'bg-no-repeat flex items-center flex-col justify-end pb-16 md:justify-center sm:items-start')}>
+                'bg-no-repeat flex items-center flex-col justify-end pb-16 md:justify-center sm:items-start')}
+                data-aos="fade-up" data-aos-duration="3000">
                 <div className={classNames(globalStyles.px, classes.heroContent, 'md:px-0')}>
                     <h1 className={classNames('text-center md:text-left font-bold text-4xl leading-9', 
                         globalStyles.sanJuanBlueColor, classes.heroTitle)}>
@@ -59,8 +60,10 @@ const Home = () => {
                     </p>
                 </div>
             </section>
-            <section className={classNames(globalStyles.px, globalStyles.mirageBlueBg, classes.companies,
-                'pt-16 pb-12 md:pb-16 bg-no-repeat md:flex md:flex-row-reverse md:justify-between md:items-center mb-12')}>
+            <section 
+                className={classNames(globalStyles.px, globalStyles.mirageBlueBg, classes.companies,
+                'pt-16 pb-12 md:pb-16 bg-no-repeat md:flex md:flex-row-reverse md:justify-between md:items-center mb-12')}
+                data-aos="fade-up" data-aos-duration="3000">
                 <div className={classNames('flex items-center justify-between flex-wrap', classes.companiesLogosContainer)}>
                     <ImageContainer alt="tesla" image={<TeslaLogo  className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
                     <ImageContainer alt="microsoft" image={<MicrosoftLogo className={classNames('text-white mx-auto', classes.companiesLogos)}/>} />
@@ -91,14 +94,18 @@ const Home = () => {
             </section>
             <section className={classNames(globalStyles.px, classes.services, 'md:mt-16 md:pt-8 md:pb-8 md:bg-no-repeat')}>
                 <article className={classNames('pb-12 md:flex md:justify-between md:items-center')}>
-                    <div className={classNames(classes.formCodeImageContainer)}>
+                    <div 
+                        className={classNames(classes.formCodeImageContainer)}
+                        data-aos="fade-right" data-aos-duration="3000">
                         <img 
                             alt="code"
                             className={classNames('block h-full w-full')}
                             src={codeIllustration}  
                         />
                     </div>
-                    <div className={classNames('sm:mt-8 md:mt-0', classes.formCodeContent)}>
+                    <div 
+                        className={classNames('sm:mt-8 md:mt-0', classes.formCodeContent)}
+                        data-aos="fade-left" data-aos-duration="3000">
                         <Typography 
                             component="h2" 
                             variant="h5" 
@@ -116,14 +123,18 @@ const Home = () => {
                 </article>
                 <article className={classNames('pb-12 md:flex md:justify-between md:flex-row-reverse md:items-center', 
                     classes.simpleUIContent)}>
-                    <div className={classNames(classes.simpleUIImageContainer)}>
+                    <div 
+                        className={classNames(classes.simpleUIImageContainer)}
+                        data-aos="fade-left" data-aos-duration="3000">
                         <img 
                             alt="code"
                             className={classNames('block h-full w-full')}
                             src={simpleUIIllustration}  
                         />
                     </div>
-                    <div className={classNames('mt-8 md:mt-0', classes.formCodeContent)}>
+                    <div 
+                        className={classNames('mt-8 md:mt-0', classes.formCodeContent)}
+                        data-aos="fade-right" data-aos-duration="3000">
                         <Typography 
                             component="h2" 
                             variant="h5" 
@@ -145,16 +156,22 @@ const Home = () => {
                     description="Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account. "
                     index={0}
                     title="Personal Finances"
+                    dataAOS="fade-up" 
+                    dataAOSDutation="3000"
                 />
                 <Card 
                     description="With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit card, and brokerage accounts."
                     index={1}
                     title={<>Banking &amp; Coverage</>}
+                    dataAOS="fade-down" 
+                    dataAOSDutation="3000"
                 />
                 <Card 
                     description="It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account."
                     index={2}
                     title="Consumer Payments"
+                    dataAOS="fade-up" 
+                    dataAOSDutation="3000"
                 />
             </section>
         </main>

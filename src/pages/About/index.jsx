@@ -16,6 +16,8 @@ const About = () => {
             <Typography 
                 className={classNames('font-bold capitalize text-center sm:text-left', globalStyles.sanJuanBlueColor)}
                 component="h2"
+                data-aos="fade-left" 
+                data-aos-duration="3000"
                 variant="h5">
                     { title }
             </Typography>
@@ -23,6 +25,8 @@ const About = () => {
                 className={classNames('text-center sm:text-left text-base mt-4 sm:mt-0 grow', 
                 globalStyles.lightJuanBlueColor, classes.contentCardDescription)}
                 component="p"
+                data-aos="fade-right" 
+                data-aos-duration="3000"
                 variant="body2">
                     { description }
             </Typography>
@@ -52,6 +56,8 @@ const About = () => {
                         className={classNames('font-bold text-center md:text-left mb-16', 
                         globalStyles.sanJuanBlueColor, classes.heroContentTitle)}
                         component="h1"
+                        data-aos="zoom-in" 
+                        data-aos-duration="3000"
                         variant="h4">
                             We empower innovators by delivering access to the financial system
                     </Typography>
@@ -65,7 +71,9 @@ const About = () => {
                     />
                 </div>
             </section>
-            <div className={classNames('flex bg-no-repeat pt-12', classes.meetingImageContainer)}>
+            <div 
+                className={classNames('flex bg-no-repeat pt-12', classes.meetingImageContainer)}
+                data-aos="fade-up" data-aos-duration="3000">
                 <div className={classNames(classes.meetingImage, 'w-full')}>
                     <Hidden smUp>
                         <img 
@@ -94,7 +102,8 @@ const About = () => {
                 <div className={classNames(classes.heroContent, 'md:pb-12')}>
                     <div 
                         className={classNames('flex flex-col items-center pt-8 md:pt-0 border-slate-300 border-y',
-                        'border-solid sm:border-0 mb-12 sm:flex-row sm:justify-between sm:items-stretch')}>
+                        'border-solid sm:border-0 mb-12 sm:flex-row sm:justify-between sm:items-stretch')}
+                        data-aos="zoom-in" data-aos-duration="3000">
                         <Paragraph 
                             description="Team Members"
                             highlight="300+"

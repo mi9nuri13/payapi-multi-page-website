@@ -9,6 +9,8 @@ const Pricing = () => {
 
     const cardsContent = useMemo(() => [
         {
+            dataAOS: 'fade-up',
+            dataAOSDuration: '3000',
             description: 'Build and test using our core set of products with up to 100 API requests ',
             price: '0.00',
             title: 'Free Plan',
@@ -42,7 +44,10 @@ const Pricing = () => {
                     name: 'Income'
                 }
             ]
-        },{
+        },
+        {
+            dataAOS: 'fade-down',
+            dataAOSDuration: '3000',
             description: 'Launch your project with unlimited requests and no contractual minimums ',
             price: '249.00',
             title: 'Basic Plan',
@@ -76,7 +81,10 @@ const Pricing = () => {
                     name: 'Income'
                 }
             ]
-        },{
+        },
+        {
+            dataAOS: 'fade-up',
+            dataAOSDuration: '3000',
             description: 'Get tailored solutions, volume pricing, and dedicated support for your team ',
             price: '499.00',
             title: 'Premium Plan',
@@ -121,6 +129,8 @@ const Pricing = () => {
                 <Typography 
                     className={classNames('font-bold text-center md:text-5xl', globalStyles.sanJuanBlueColor)}
                     component="h1"
+                    data-aos="zoom-in" 
+                    data-aos-duration="3000"
                     variant="h5">
                     Pricing
                 </Typography>

@@ -4,14 +4,16 @@ import { useStyles } from './styles'
 import { useGlobalStyles } from '../../../styles'
 import { useMemo } from 'react';
 
-const Card = ({ description, index, title }) => {
+const Card = ({ description, dataAOS, dataAOSDutation, index, title }) => {
     const classes = useStyles();
     const globalStyles = useGlobalStyles();
 
     const titleClasses = useMemo(() => [ classes.personalFinances, classes.banking, classes.payments ], [ classes ]);
 
     return (
-        <article className={classNames('mb-8 relative', classes.card)}>
+        <article 
+            className={classNames('mb-8 relative', classes.card)}
+            data-aos={dataAOS} data-aos-duration={dataAOSDutation}>
             <Typography 
                 component="h2" 
                 className={classNames('text-center sm:text-left md:text-center font-bold', globalStyles.sanJuanBlueColor, 
