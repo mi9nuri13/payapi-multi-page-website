@@ -27,7 +27,20 @@ const About = () => {
                     { description }
             </Typography>
         </div>
-    ), [ classes, globalStyles ])
+    ), [ classes, globalStyles ]);
+
+    const Paragraph = useCallback(({ description, highlight }) => (
+        <Typography 
+            className={classNames('text-center text-base mb-8 flex flex-col items-center', 
+            globalStyles.lightJuanBlueColor,)}
+            component="p"
+            variant="body2">
+                { description }
+                <span className={classNames(globalStyles.darkPinkColor, 'mt-2.5 text-4xl font-bold')}>
+                    { highlight }
+                </span>
+        </Typography>
+    ), [ globalStyles ])
 
     return (
         <main>
@@ -73,6 +86,34 @@ const About = () => {
                     />
                 </Hidden>
             </div>
+            <section className={classNames(globalStyles.px)}>
+                <div className={classNames(classes.heroContent)}>
+                    <div 
+                        className={classNames('flex flex-col items-center pt-8 border-slate-300 border-y',
+                        'border-solid mb-12')}>
+                        <Paragraph 
+                            description="Team Members"
+                            highlight="300+"
+                        />
+                        <Paragraph 
+                            description="Offices in the US"
+                            highlight="3"
+                        />
+                        <Paragraph 
+                            description="Transactions analyzed"
+                            highlight="10M+"
+                        />
+                    </div>
+                    <ContentCard 
+                        description="We strongly believe there's always an opportunity to learn from each other outside of day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups. We always value cross-team collaboration and diversity of thought, no matter the job title."
+                        title="Our business"
+                    />
+                    <ContentCard 
+                        description="We're all passionate about building a more efficient and inclusive financial infrastructure together. At PayAPI, we have diverse backgrounds and skills."
+                        title="The people"
+                    />
+                </div>
+            </section>
         </main>
     );
 };
