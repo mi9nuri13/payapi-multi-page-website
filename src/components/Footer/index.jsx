@@ -21,19 +21,19 @@ const Footer = () => {
                 </Link>
                 <ul className={classNames('flex flex-col items-center mt-8 sm:mt-0 sm:ml-8 sm:flex-row',)}>
                     <li >
-                        <Link to="/pricing" className={classNames('text-slate-200', 'color-transition', 
+                        <Link to="/pricing" className={classNames('text-slate-200 hover:text-white color-transition', 
                             'md:mb-0 sm:mr-4 sm:mt-0')}>
                             Pricing
                         </Link>
                     </li>
                     <li>
-                        <Link to="about-us" className={classNames('text-slate-200', 'color-transition', 
+                        <Link to="about-us" className={classNames('text-slate-200 hover:text-white color-transition', 
                             'md:mb-0 mt-4 block sm:mr-4 sm:mt-0')} >
                             About
                         </Link>
                     </li>
                     <li>
-                        <Link to="/contact" className={classNames('text-slate-200', 'color-transition', 
+                        <Link to="/contact" className={classNames('text-slate-200 hover:text-white color-transition', 
                             'md:mb-0 mt-4 block sm:mt-0')}>
                             Contact
                         </Link>
@@ -41,9 +41,9 @@ const Footer = () => {
                 </ul>
             </div>
             <ul className={classNames('flex items-center mt-8 sm:mt-0 sm:flex-row',)}>
-                <FacebookIcon className={classNames('text-white mr-4')} />
-                <TwitterIcon className={classNames('text-white mr-4')} />
-                <LinkedInIcon className={classNames('text-white')} />
+                <FacebookIcon className={classNames('text-white hover:pointer mr-4', globalStyles.darkPinkButton)} />
+                <TwitterIcon className={classNames('text-white hover:pointer mr-4', globalStyles.darkPinkButton)} />
+                <LinkedInIcon className={classNames('text-white hover:pointer', globalStyles.darkPinkButton)} />
             </ul>
         </footer>
     );

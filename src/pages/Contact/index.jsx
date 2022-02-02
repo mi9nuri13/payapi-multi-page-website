@@ -106,7 +106,7 @@ const Contact = () => {
                         />
                         <button 
                             className={classNames('rounded-full bg-transparent px-8 py-1.5 mt-5 border border-cyan-900 border-solid capitalize',
-                            globalStyles.sanJuanBlueColor, 'mr-auto')}>
+                            globalStyles.sanJuanBlueColor, globalStyles.transparentButton, 'hover:text-white mr-auto')}>
                             Submit
                         </button>
                     </form>

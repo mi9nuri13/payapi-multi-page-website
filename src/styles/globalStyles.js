@@ -24,6 +24,16 @@ export const useGlobalStyles = makeStyles(theme => ({
             fill: 'currentcolor !important'
         }
     },
+    darkPinkButton: {
+        '&:hover': {
+            backgroundColor: '#DA6D97'
+        }
+    },
+    transparentButton: {
+        '&:hover': {
+            backgroundColor: '#36536B',
+        }
+    },
     darkPinkBg: {
         backgroundColor: '#BA4270'
     },
@@ -41,6 +51,11 @@ export const useGlobalStyles = makeStyles(theme => ({
     },
     lightJuanBlueColor: {
         color: '#6C8294'
+    },
+    lightJuanBlueColorHover: {
+        '&:hover': {
+            color: '#36536B',
+        }
     },
     hero: {
         backgroundImage: `url(${circlePattern})`,

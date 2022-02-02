@@ -47,7 +47,7 @@ const Home = () => {
                             placeholder='Enter email address'
                         />
                         <button 
-                            className={classNames(globalStyles.darkPinkBg, 
+                            className={classNames(globalStyles.darkPinkBg, globalStyles.darkPinkButton,
                             'border-0 outline-none w-full sm:w-auto mt-4 sm:mt-0 rounded-full text-white py-2.5 px-5')}>
                             Schedule a Demo
                         </button>

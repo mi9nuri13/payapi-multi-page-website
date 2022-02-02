@@ -40,15 +40,15 @@ const Card = ({ description, list, price, title }) => {
             <Divider className={classNames('border-slate-300 mt-8 w-full')} />
             <ul className={classNames('flex flex-col items-start mt-4 py-4')}>
                 {
-                    list.map(item => (
-                        <ListItem { ...item } />
+                    list.map((item, index) => (
+                        <ListItem key={index} { ...item } />
                     ))
                 }
             </ul>
             <Divider className={classNames('border-slate-300 w-full')} />
             <button 
                 className={classNames('rounded-full bg-transparent px-4 py-2 mt-8 border border-cyan-900 border-solid capitalize',
-                globalStyles.sanJuanBlueColor)}>
+                globalStyles.sanJuanBlueColor, globalStyles.transparentButton, 'hover:text-white')}>
                 Request access
             </button>
         </article>

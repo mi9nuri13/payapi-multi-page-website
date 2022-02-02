@@ -30,19 +30,19 @@ const Header = () => {
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/pricing" >
                     <ListItemButton>
                         <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0')}} primary="Pricing" />
+                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColorHover)}} primary="Pricing" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/about-us">
                     <ListItemButton>
                         <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0')}} primary="About" />
+                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColorHover)}} primary="About" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/contact">
                     <ListItemButton>
                         <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0')}} primary="Contact" />
+                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColorHover)}} primary="Contact" />
                     </ListItemButton>
                 </ListItem>
             </List>
@@ -51,7 +51,7 @@ const Header = () => {
                     classes.headerDrawerBottom)}>
                     <Link to="/resume" onClick={clickHandler} className={classNames('no-underline', classes.contactMeLink)}>
                         <Button 
-                            className={classNames('w-full font-bold text-white', classes.headerGetStarted, 
+                            className={classNames('w-full font-bold text-white', classes.headerGetStarted, globalStyles.darkPinkButton,
                             classes.headerContactMe, 'bg-transition')}>
                             Contact me
                         </Button>
@@ -59,7 +59,7 @@ const Header = () => {
                 </div>
             </Hidden>
         </nav>
-    ), [ classes, clickHandler, menuClickHandler, ]);
+    ), [ classes, clickHandler, globalStyles, menuClickHandler, ]);
 
     return (
         <header className={classNames('flex items-center justify-between py-4 absolute w-full', globalStyles.px)}>
@@ -84,7 +84,7 @@ const Header = () => {
                 <Hidden smDown>
                     <Link to="/resume" className={classNames('')}>
                         <button 
-                            className={classNames(classes.headerGetStarted, globalStyles.darkPinkBg, 
+                            className={classNames(classes.headerGetStarted, globalStyles.darkPinkBg, globalStyles.darkPinkButton,
                             'border-0 outline-none rounded-full text-white py-2 px-5')}>
                             Schedule a Demo
                         </button>
