@@ -9,10 +9,17 @@ import { ReactComponent as TeslaLogo } from '../../assets/images/shared/tesla.sv
 import { ReactComponent as NvidiaLogo } from '../../assets/images/shared/nvidia.svg';
 import { ReactComponent as OracleLogo } from '../../assets/images/shared/oracle.svg';
 import { ReactComponent as HewlettPackardLogo } from '../../assets/images/shared/hewlett-packard.svg';
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
     const classes = useStyles();
     const globalStyles = useGlobalStyles();
+
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const onSubmit = data => {
+        console.log(data);
+        reset();
+    }
 
     const ImageContainer = useCallback(({ alt, children, image }) => (
         <div className={classNames('mb-12 w-1/2', classes.companyImageContainer)}>
@@ -32,43 +39,60 @@ const Contact = () => {
                         Submit a help request and we’ll get in touch shortly.
                 </Typography>
                 <div className={classNames('md:flex md:items-center md:justify-between')}>
-                    <form className={classNames(classes.form)}>
+                    <form 
+                        className={classNames(classes.form)}
+                        onSubmit={handleSubmit(onSubmit)}>
                         <TextField 
                             classes={{ root: classNames(classes.textField)}}
                             className={classNames('mb-2.5')}
+                            error={Boolean(errors.name)}
                             fullWidth
+                            helperText={errors.name ? "This field can't be empty" : ''}
                             label="Name" 
                             variant="standard" 
+                            {...register("name", { required: true })}
                         />
                         <TextField 
                             classes={{ root: classNames(classes.textField)}}
                             className={classNames('mb-2.5')}
+                            error={Boolean(errors["email-address"])}
                             fullWidth
+                            helperText={errors["email-address"] ? "This field can't be empty" : ''}
                             label="Email Address" 
                             variant="standard" 
+                            {...register("email-address", { required: true })}
                         />
                         <TextField 
                             classes={{ root: classNames(classes.textField)}}
                             className={classNames('mb-2.5')}
+                            error={Boolean(errors["company-name"])}
                             fullWidth
+                            helperText={errors["company-name"] ? "This field can't be empty" : ''}
                             label="Company Name" 
                             variant="standard" 
+                            {...register("company-name", { required: true })}
                         />
                         <TextField 
                             classes={{ root: classNames(classes.textField)}}
                             className={classNames('mb-2.5')}
+                            error={Boolean(errors["title"])}
                             fullWidth
+                            helperText={errors.title ? "This field can't be empty" : ''}
                             label="Title" 
                             variant="standard" 
+                            {...register("title", { required: true })}
                         />
                         <TextField 
                             classes={{ root: classNames(classes.textField)}}
                             className={classNames('mb-2.5')}
+                            error={Boolean(errors["message"])}
                             fullWidth
+                            helperText={errors.message ? "This field can't be empty" : ''}
                             label="Message" 
                             multiline
                             rows={5}
                             variant="standard" 
+                            {...register("message", { required: true })}
                         />
                         <FormControlLabel 
                             classes={{ root: classNames('mt-4', classes.formControlLabel)}}
@@ -78,6 +102,7 @@ const Contact = () => {
                                 />
                             } 
                             label="Stay up-to-date with company announcements and updates to our API" 
+                            {...register("receive-announcements")}
                         />
                         <button 
                             className={classNames('rounded-full bg-transparent px-8 py-1.5 mt-5 border border-cyan-900 border-solid capitalize',

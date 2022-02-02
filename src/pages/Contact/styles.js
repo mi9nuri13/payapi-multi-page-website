@@ -27,6 +27,9 @@ export const useStyles = makeStyles(theme => ({
     textField: {
         '& .MuiInputLabel-root': {
             color: '#6C8294'
+        },
+        '& .Mui-error': {
+            color: '#d32f2f'
         }
     },
     formControlLabel: {
