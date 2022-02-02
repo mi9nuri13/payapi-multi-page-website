@@ -1,7 +1,6 @@
 import classNames from 'classnames'
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/images/icons/logo.svg';
-import { List, ListItem, ListItemButton, ListItemText } from '@mui/material'
 import { useGlobalStyles } from '../../styles'
 import { useStyles } from './styles'
 import FacebookIcon from '@mui/icons-material/Facebook';
