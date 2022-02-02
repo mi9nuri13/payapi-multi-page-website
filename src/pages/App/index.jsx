@@ -14,6 +14,7 @@ const App = () => {
     const Footer = loadable(() => import(/* webpackChunkName: "Footer" */ '../../components/Footer'));
     const PricingPage = loadable(() => import(/* webpackChunkName: "PricingPage" */ '../Pricing'));
     const AboutUsPage = loadable(() => import(/* webpackChunkName: "AboutUsPage" */ '../About'));
+    const ContactPage = loadable(() => import(/* webpackChunkName: "ContactPage" */ '../Contact'));
 
     return (
         <>
@@ -24,6 +25,7 @@ const App = () => {
                             <Header />
                             <Routes>
                                 <Route exact path="/pricing" element={<PricingPage />} />
+                                <Route exact path="/contact" element={<ContactPage />} />
                                 <Route exact path="/about-us" element={<AboutUsPage />} />
                                 <Route exact path="/" element={<HomePage />} />
                             </Routes>
