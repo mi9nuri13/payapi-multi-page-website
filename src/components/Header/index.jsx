@@ -1,4 +1,4 @@
-import { Button, Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemButton, ListItemText } from '@mui/material'
+import { Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemButton, ListItemText } from '@mui/material'
 import classNames from 'classnames'
 import MenuIcon from '@mui/icons-material/Menu';
 import { useStyles } from './styles'
