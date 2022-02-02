@@ -12,7 +12,7 @@ const About = () => {
     const globalStyles = useGlobalStyles();
 
     const ContentCard = useCallback(({ description, title }) => (
-        <div className={classNames('mb-8 sm:flex sm:items-start sm:justify-between')}>
+        <div className={classNames('mb-8 sm:flex sm:items-start sm:justify-between', classes.contentCard)}>
             <Typography 
                 className={classNames('font-bold capitalize text-center sm:text-left', globalStyles.sanJuanBlueColor)}
                 component="h2"
@@ -46,7 +46,7 @@ const About = () => {
 
     return (
         <main>
-            <section className={classNames('bg-no-repeat flex md:mb-16', globalStyles.hero, globalStyles.px)}>
+            <section className={classNames('bg-no-repeat flex', globalStyles.hero, globalStyles.px)}>
                 <div className={classNames(classes.heroContent)}>
                     <Typography 
                         className={classNames('font-bold text-center md:text-left mb-16', 
@@ -65,33 +65,35 @@ const About = () => {
                     />
                 </div>
             </section>
-            <div className={classNames(classes.meetingImage, 'mt-12 md:mt-16 mb-8')}>
-                <Hidden smUp>
-                    <img 
-                        alt="meeting"
-                        className={classNames('block w-full h-full object-cover')}
-                        src={meetingImage}
-                    />
-                </Hidden>
-                <Hidden smDown mdUp>
-                    <img 
-                        alt="meeting"
-                        className={classNames('block w-full h-full object-cover')}
-                        src={meetingTabletImage}
-                    />
-                </Hidden>
-                <Hidden mdDown>
-                    <img 
-                        alt="meeting"
-                        className={classNames('block w-full h-full object-cover')}
-                        src={meetingDesktopImage}
-                    />
-                </Hidden>
+            <div className={classNames('flex bg-no-repeat pt-12', classes.meetingImageContainer)}>
+                <div className={classNames(classes.meetingImage, 'w-full')}>
+                    <Hidden smUp>
+                        <img 
+                            alt="meeting"
+                            className={classNames('block w-full h-full object-cover')}
+                            src={meetingImage}
+                        />
+                    </Hidden>
+                    <Hidden smDown mdUp>
+                        <img 
+                            alt="meeting"
+                            className={classNames('block w-full h-full object-cover')}
+                            src={meetingTabletImage}
+                        />
+                    </Hidden>
+                    <Hidden mdDown>
+                        <img 
+                            alt="meeting"
+                            className={classNames('block w-full h-full object-cover')}
+                            src={meetingDesktopImage}
+                        />
+                    </Hidden>
+                </div>
             </div>
-            <section className={classNames(globalStyles.px, 'md:flex md:mt-12')}>
-                <div className={classNames(classes.heroContent)}>
+            <section className={classNames(globalStyles.px, 'md:flex mt-8 md:mt-0')}>
+                <div className={classNames(classes.heroContent, 'md:pb-12')}>
                     <div 
-                        className={classNames('flex flex-col items-center pt-8 border-slate-300 border-y',
+                        className={classNames('flex flex-col items-center pt-8 md:pt-0 border-slate-300 border-y',
                         'border-solid sm:border-0 mb-12 sm:flex-row sm:justify-between sm:items-stretch')}>
                         <Paragraph 
                             description="Team Members"
