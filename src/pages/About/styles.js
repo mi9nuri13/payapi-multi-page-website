@@ -24,5 +24,10 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             height: 450,
         }
+    },
+    paragraph: {
+        [theme.breakpoints.up('sm')]: {
+            width: '31%'
+        },
     }
 }));

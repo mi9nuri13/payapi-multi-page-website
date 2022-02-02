@@ -31,16 +31,18 @@ const About = () => {
 
     const Paragraph = useCallback(({ description, highlight }) => (
         <Typography 
-            className={classNames('text-center text-base mb-8 flex flex-col items-center', 
-            globalStyles.lightJuanBlueColor,)}
+            className={classNames('text-center text-base mb-8 flex flex-col items-center', classes.paragraph,
+            globalStyles.lightJuanBlueColor, 'sm:border-slate-300 sm:border-y sm:border-solid sm:pt-4 sm:pb-4')}
             component="p"
             variant="body2">
-                { description }
-                <span className={classNames(globalStyles.darkPinkColor, 'mt-2.5 text-4xl font-bold')}>
+                <Hidden smUp>
+                    { description }
+                </Hidden>
+                <span className={classNames(globalStyles.darkPinkColor, 'mt-2.5 sm:mt-0 text-4xl font-bold')}>
                     { highlight }
                 </span>
         </Typography>
-    ), [ globalStyles ])
+    ), [ classes, globalStyles ])
 
     return (
         <main>
@@ -86,11 +88,11 @@ const About = () => {
                     />
                 </Hidden>
             </div>
-            <section className={classNames(globalStyles.px)}>
+            <section className={classNames(globalStyles.px, 'md:flex md:mt-12')}>
                 <div className={classNames(classes.heroContent)}>
                     <div 
                         className={classNames('flex flex-col items-center pt-8 border-slate-300 border-y',
-                        'border-solid mb-12')}>
+                        'border-solid sm:border-0 mb-12 sm:flex-row sm:justify-between sm:items-stretch')}>
                         <Paragraph 
                             description="Team Members"
                             highlight="300+"
