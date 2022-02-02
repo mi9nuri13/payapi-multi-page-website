@@ -1,8 +1,11 @@
 import classNames from 'classnames'
 import { useGlobalStyles } from '../../styles'
-import { Typography } from '@mui/material';
+import { Hidden, Typography } from '@mui/material';
 import { useStyles } from './styles';
 import { useCallback } from 'react'
+import meetingImage from '../../assets/images/about/mobile/image-team-members.jpg';
+import meetingTabletImage from '../../assets/images/about/tablet/image-team-members.jpg';
+import meetingDesktopImage from '../../assets/images/about/desktop/image-team-members.jpg';
 
 const About = () => {
     const classes = useStyles();
@@ -47,6 +50,29 @@ const About = () => {
                     />
                 </div>
             </section>
+            <div className={classNames(classes.meetingImage, 'mt-12 mb-8')}>
+                <Hidden smUp>
+                    <img 
+                        alt="meeting"
+                        className={classNames('block w-full h-full object-cover')}
+                        src={meetingImage}
+                    />
+                </Hidden>
+                <Hidden smDown mdUp>
+                    <img 
+                        alt="meeting"
+                        className={classNames('block w-full h-full object-cover')}
+                        src={meetingTabletImage}
+                    />
+                </Hidden>
+                <Hidden mdDown>
+                    <img 
+                        alt="meeting"
+                        className={classNames('block w-full h-full object-cover')}
+                        src={meetingDesktopImage}
+                    />
+                </Hidden>
+            </div>
         </main>
     );
 };

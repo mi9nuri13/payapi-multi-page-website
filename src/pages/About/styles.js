@@ -15,5 +15,14 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             maxWidth: '70%'
         }
+    },
+    meetingImage: {
+        height: 270,
+        [theme.breakpoints.up('sm')]: {
+            height: 350,
+        },
+        [theme.breakpoints.up('md')]: {
+            height: 450,
+        }
     }
 }));
