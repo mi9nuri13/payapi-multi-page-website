@@ -17,30 +17,29 @@ import simpleUIIllustration from '../../assets/images/home/illustration-simple-u
 const Home = () => {
     const classes = useStyles();
     const globalStyles = useGlobalStyles();
-    /**
-     * <img 
-                alt={alt}
-                src={image} 
-                className={classNames('block mx-auto h-full', classes.companyImage)}
-            />
-     */
+    
+    const submitHandler = event => {
+        event.preventDefault();
+    }
 
     const ImageContainer = useCallback(({ alt, children, image }) => (
         <div className={classNames('mb-8 w-1/2', classes.companyImageContainer)}>
             { image }
         </div>
-    ), [ classes ])
+    ), [ classes ]);
 
     return (
         <main>
             <section className={classNames(globalStyles.px, classes.hero, 
                 'bg-no-repeat flex items-center flex-col justify-end pb-16 md:justify-center sm:items-start')}>
-                <div className={classNames(globalStyles.px, 'md:px-0 md:max-w-lg')}>
+                <div className={classNames(globalStyles.px, classes.heroContent, 'md:px-0')}>
                     <h1 className={classNames('text-center md:text-left font-bold text-4xl leading-9', 
                         globalStyles.sanJuanBlueColor, classes.heroTitle)}>
                         Start building with our APIs for absolutely free.
                     </h1>
-                    <form className={classNames('mt-8 sm:flex sm:items-stretch sm:rounded-full sm:bg-white')}>
+                    <form 
+                        className={classNames('mt-8 sm:flex sm:items-stretch sm:rounded-full sm:bg-white')}
+                        onSubmit={submitHandler}>
                         <input 
                             className={classNames('border-0 outline-none w-full sm:w-auto rounded-full py-2 px-3.5',
                             'sm:grow sm:rounded-br-none sm:rounded-tr-none', globalStyles.lightJuanBlueColor)}

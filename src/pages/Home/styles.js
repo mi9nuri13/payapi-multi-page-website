@@ -11,16 +11,17 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             backgroundPosition: 'center top 83px, center top -634px',
             backgroundSize: '240px, 900px',
+            height: 724,
         },
         [theme.breakpoints.up(800)]: {
             backgroundPosition: 'center top 83px, center top -725px',
             backgroundSize: '240px, 1020px',
-            height: 500,
 
         },
         [theme.breakpoints.up('md')]: {
             backgroundPosition: 'right 121px top 83px, right -100px top -64px',
             backgroundSize: '270px, contain',
+            height: 500,
 
         },
         [theme.breakpoints.up(1200)]: {
@@ -28,6 +29,14 @@ export const useStyles = makeStyles(theme => ({
             backgroundSize: '323px, 622px',
             height: 580,
 
+        }
+    },
+    heroContent: {
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '26rem'
+        },
+        [theme.breakpoints.up(1045)]: {
+            maxWidth: '30rem'
         }
     },
     heroTitle: {
