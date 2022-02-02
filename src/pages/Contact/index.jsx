@@ -22,16 +22,17 @@ const Contact = () => {
 
     return (
         <main>
-            <section className={classNames('bg-no-repeat flex flex-col items-stretch', globalStyles.hero, globalStyles.px)}>
+            <section className={classNames('bg-no-repeat flex flex-col items-stretch md:mb-12', 
+                globalStyles.hero, globalStyles.px, classes.hero)}>
                 <Typography 
-                    className={classNames('font-bold text-center md:text-left mb-16', 
+                    className={classNames('font-bold text-center md:text-left mb-16 md:mb-12', 
                     globalStyles.sanJuanBlueColor, classes.heroContentTitle)}
                     component="h1"
                     variant="h4">
                         Submit a help request and we’ll get in touch shortly.
                 </Typography>
-                <div>
-                    <form>
+                <div className={classNames('md:flex md:items-center md:justify-between')}>
+                    <form className={classNames(classes.form)}>
                         <TextField 
                             classes={{ root: classNames(classes.textField)}}
                             className={classNames('mb-2.5')}
@@ -84,7 +85,7 @@ const Contact = () => {
                             Submit
                         </button>
                     </form>
-                    <div className={classNames('mt-16')}>
+                    <div className={classNames('mt-16 md:mt-0', classes.companiesContainer)}>
                         <Typography 
                             component="h2" 
                             variant="h5" 
