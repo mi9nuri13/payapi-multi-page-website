@@ -1,4 +1,4 @@
-import { Button, Drawer, Hidden, List, ListItem, ListItemButton, ListItemText } from '@mui/material'
+import { Button, Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemButton, ListItemText } from '@mui/material'
 import classNames from 'classnames'
 import MenuIcon from '@mui/icons-material/Menu';
 import { useStyles } from './styles'
@@ -22,47 +22,49 @@ const Header = () => {
     const clickHandler = useCallback(() => setCanIOpenNavBar(false), []);
 
     const headerNavigation = useMemo(() => (
-        <nav className={classNames('pt-4 md:ml-8 sm:pt-0 md:relative h-full', classes.headerNav)}>
+        <nav className={classNames('pt-8 md:ml-8 sm:pt-0 md:relative sm:px-0 h-full', globalStyles.px)}>
             <Hidden smUp>
-                <Button onClick={menuClickHandler}><CloseIcon classes={{ root: 'text-white'}} /></Button>
+                <IconButton 
+                    className={classNames('block ml-auto')}
+                    onClick={menuClickHandler}>
+                    <CloseIcon classes={{ root: 'text-white'}} />
+                </IconButton>
+                <Divider className={classNames('w-full mt-4 mb-4 border-slate-200')} />
             </Hidden>
-            <List component="ul" className={classNames('flex flex-col sm:flex-row',)}>
+            <List component="ul" className={classNames('flex flex-col item-center sm:flex-row sm:pb-0 sm:pt-0',)}>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/pricing" >
-                    <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColorHover)}} primary="Pricing" />
+                    <ListItemButton className={classNames('sm:pb-0 sm:pt-0')}>
+                        <ListItemText classes={{ root: classNames('sm:text-sky-700 text-center color-transition', classes.headerNavItemText, 
+                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColor, globalStyles.lightJuanBlueColorHover)}} primary="Pricing" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/about-us">
-                    <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColorHover)}} primary="About" />
+                    <ListItemButton className={classNames('sm:pb-0 sm:pt-0')}>
+                        <ListItemText classes={{ root: classNames('sm:text-sky-700 text-center color-transition', classes.headerNavItemText, 
+                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColor, globalStyles.lightJuanBlueColorHover)}} primary="About" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/contact">
-                    <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white sm:text-sky-700', 'color-transition', classes.headerNavItemText, 
-                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColorHover)}} primary="Contact" />
+                    <ListItemButton className={classNames('sm:pb-0 sm:pt-0')}>
+                        <ListItemText classes={{ root: classNames('sm:text-sky-700 text-center color-transition', classes.headerNavItemText, 
+                            'md:mb-0 md:mt-0', globalStyles.lightJuanBlueColor, globalStyles.lightJuanBlueColorHover)}} primary="Contact" />
                     </ListItemButton>
                 </ListItem>
             </List>
             <Hidden smUp>
-                <div elevation={0} className={classNames('flex flex-col items-stretch absolute w-full bg-transparent',  
-                    classes.headerDrawerBottom)}>
-                    <Link to="/resume" onClick={clickHandler} className={classNames('no-underline', classes.contactMeLink)}>
-                        <Button 
-                            className={classNames('w-full font-bold text-white', classes.headerGetStarted, globalStyles.darkPinkButton,
-                            classes.headerContactMe, 'bg-transition')}>
-                            Contact me
-                        </Button>
-                    </Link>
-                </div>
+                <Link to="/contact" onClick={clickHandler} className={classNames('no-underline', classes.contactMeLink)}>
+                    <button 
+                        className={classNames('w-full border-0 py-3 rounded-full outline-none font-bold text-white', 
+                        globalStyles.darkPinkBg, classes.headerContactMe, 'bg-transition', globalStyles.darkPinkButton,)}>
+                        Schedule a Demo
+                    </button>
+                </Link>
             </Hidden>
         </nav>
     ), [ classes, clickHandler, globalStyles, menuClickHandler, ]);
 
     return (
-        <header className={classNames('flex items-center justify-between py-4 absolute w-full', globalStyles.px)}>
+        <header className={classNames('flex items-center justify-between py-4 sm:pt-6 absolute w-full', globalStyles.px)}>
             <div elevation={0} className={classNames('flex items-center')}>
                 <Link to="/">
                     <img 
@@ -75,17 +77,21 @@ const Header = () => {
                     { headerNavigation }
                 </Hidden>
                 <Hidden smUp>
-                    <Drawer anchor="right" open={canIOpenNavBar} onClose={menuClickHandler} classes={{ paper: classes.headerDrawe}}>
+                    <Drawer 
+                        anchor="right" 
+                        open={canIOpenNavBar} 
+                        onClose={menuClickHandler} 
+                        classes={{ paper: classes.headerDrawer,}}>
                         { headerNavigation }
                     </Drawer>
                 </Hidden>
             </div>
             <div elevation={0} className={classNames('flex items-center')}>
                 <Hidden smDown>
-                    <Link to="/resume" className={classNames('')}>
+                    <Link to="/contact" className={classNames('')}>
                         <button 
-                            className={classNames(classes.headerGetStarted, globalStyles.darkPinkBg, globalStyles.darkPinkButton,
-                            'border-0 outline-none rounded-full text-white py-2 px-5')}>
+                            className={classNames(globalStyles.darkPinkBg, globalStyles.darkPinkButton, classes.scheduleButton,
+                            'border-0 outline-none rounded-full text-white py-2.5')}>
                             Schedule a Demo
                         </button>
                     </Link>
